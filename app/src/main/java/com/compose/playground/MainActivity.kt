@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import com.compose.playground.account_statement.RenderAccountStatement
+import com.compose.playground.bnpl_pre_onboarding.PreOnboardingUi
 import com.compose.playground.legacy.dialogues.DateRangePickerDialog
 import com.compose.playground.theme.OkcTheme
 import org.joda.time.DateTime
@@ -13,9 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             OkcTheme {
-                RenderAccountStatement(
-                    onShowDateRangePicker = ::openDateRangeDialog
-                )
+                PreOnboardingUi()
+//                RenderAccountStatement(
+//                    onShowDateRangePicker = ::openDateRangeDialog
+//                )
             }
         }
     }
