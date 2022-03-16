@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -27,13 +28,12 @@ fun DarkSolidButton(
     text: String,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    color: Color = green_primary,
+    color: Color = MaterialTheme.colors.primary,
     elevation: ButtonElevation? = ButtonDefaults.elevation(),
     horizontalContentPadding: Dp = 16.dp,
     verticalContentPadding: Dp = 12.dp,
     cornerRadius: Dp = 24.dp,
-    textColor: Color = white,
-    textSize: Float = 16.0f
+    textStyle: TextStyle = darkSolidButtonTextStyle,
 ) {
     Button(
         onClick = onClick,
@@ -42,18 +42,17 @@ fun DarkSolidButton(
             vertical = verticalContentPadding
         ),
         shape = RoundedCornerShape(cornerRadius),
-        colors = ButtonDefaults.buttonColors(backgroundColor = color, contentColor = textColor),
+        colors = ButtonDefaults.buttonColors(backgroundColor = color),
         elevation = elevation,
         enabled = enabled,
         modifier = modifier
     ) {
         Text(
             text = text,
-            fontSize = TextUnit(textSize, TextUnitType.Sp),
-            color = textColor,
-            letterSpacing = TextUnit(textLineSpacing6.value, TextUnitType.Sp),
-            fontStyle = FontStyle.Normal,
-            fontWeight = FontWeight.Bold,
+            fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
+            color = textStyle.color,
+            letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
+            fontWeight = textStyle.fontWeight,
         )
     }
 }
@@ -65,13 +64,12 @@ fun LightSolidButton(
     text: String,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    color: Color = white,
+    color: Color = MaterialTheme.colors.surface,
     elevation: ButtonElevation? = ButtonDefaults.elevation(),
     horizontalContentPadding: Dp = 16.dp,
     verticalContentPadding: Dp = 12.dp,
     cornerRadius: Dp = 24.dp,
-    textColor: Color = green_primary,
-    textSize: Float = 16.0f
+    textStyle: TextStyle = lightSolidButtonTextStyle,
 ) {
     Button(
         onClick = onClick,
@@ -80,18 +78,17 @@ fun LightSolidButton(
             vertical = verticalContentPadding
         ),
         shape = RoundedCornerShape(cornerRadius),
-        colors = ButtonDefaults.buttonColors(backgroundColor = color, contentColor = textColor),
+        colors = ButtonDefaults.buttonColors(backgroundColor = color),
         elevation = elevation,
         enabled = enabled,
         modifier = modifier
     ) {
         Text(
             text = text,
-            fontSize = TextUnit(textSize, TextUnitType.Sp),
-            color = textColor,
-            letterSpacing = TextUnit(textLineSpacing6.value, TextUnitType.Sp),
-            fontStyle = FontStyle.Normal,
-            fontWeight = FontWeight.Bold,
+            fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
+            color = textStyle.color,
+            letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
+            fontWeight = textStyle.fontWeight,
         )
     }
 }
@@ -108,10 +105,9 @@ fun DarkOutlineButton(
     horizontalContentPadding: Dp = 16.dp,
     verticalContentPadding: Dp = 12.dp,
     strokeWidth: Dp = 1.dp,
-    strokeColor: Color = green_primary,
+    strokeColor: Color = MaterialTheme.colors.primary,
     cornerRadius: Dp = 24.dp,
-    textColor: Color = green_primary,
-    textSize: Float = 16.0f
+    textStyle: TextStyle = darkOutlineButtonTextStyle,
 ) {
 
     OutlinedButton(
@@ -131,11 +127,10 @@ fun DarkOutlineButton(
     ) {
         Text(
             text = text,
-            fontSize = TextUnit(textSize, TextUnitType.Sp),
-            color = textColor,
-            letterSpacing = TextUnit(textLineSpacing6.value, TextUnitType.Sp),
-            fontStyle = FontStyle.Normal,
-            fontWeight = FontWeight.Bold,
+            fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
+            color = textStyle.color,
+            letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
+            fontWeight = textStyle.fontWeight,
         )
     }
 }

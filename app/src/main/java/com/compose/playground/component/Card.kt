@@ -19,8 +19,8 @@ import com.compose.playground.theme.white
 fun OkcMaterialCard(
     modifier: Modifier = Modifier,
     cornerRadius: Dp = 8.dp,
-    backgroundColor: Color = white,
-    contentColor: Color = grey900,
+    backgroundColor: Color = MaterialTheme.colors.surface,
+    contentColor: Color = MaterialTheme.colors.onSurface,
     strokeWidth: Dp? = null,
     strokeColor: Color? = null,
     elevation: Dp = 0.dp,
