@@ -49,10 +49,7 @@ fun DarkSolidButton(
     ) {
         Text(
             text = text,
-            fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
-            color = textStyle.color,
-            letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
-            fontWeight = textStyle.fontWeight,
+            style = textStyle,
         )
     }
 }
@@ -85,10 +82,7 @@ fun LightSolidButton(
     ) {
         Text(
             text = text,
-            fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
-            color = textStyle.color,
-            letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
-            fontWeight = textStyle.fontWeight,
+            style = textStyle
         )
     }
 }
@@ -127,10 +121,7 @@ fun DarkOutlineButton(
     ) {
         Text(
             text = text,
-            fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
-            color = textStyle.color,
-            letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
-            fontWeight = textStyle.fontWeight,
+            style = textStyle,
         )
     }
 }

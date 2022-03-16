@@ -69,10 +69,7 @@ fun OkcExtendedFloatingActionButton(
         text = {
             Text(
                 text = text,
-                fontSize = TextUnit(textStyle.fontSize.value, TextUnitType.Sp),
-                color = textStyle.color,
-                letterSpacing = TextUnit(textStyle.letterSpacing.value, TextUnitType.Sp),
-                fontWeight = textStyle.fontWeight,
+                style = textStyle,
             )
         },
         onClick = onClick,
