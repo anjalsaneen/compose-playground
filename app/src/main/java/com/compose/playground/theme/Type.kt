@@ -115,6 +115,22 @@ val button = TextStyle(
     color = grey900,
 )
 
+val darkSolidButtonTextStyle = button.copy(
+    color = white
+)
+
+val lightSolidButtonTextStyle = button.copy(
+    color = green_primary
+)
+
+val darkOutlineButtonTextStyle = button.copy(
+    color = green_primary
+)
+
+val extendedFabTextStyle = button.copy(
+    color = white
+)
+
 val caption1 = TextStyle(
     fontWeight = FontWeight.Normal,
     fontSize = 13.sp,
